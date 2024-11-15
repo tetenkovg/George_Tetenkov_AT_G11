@@ -1,4 +1,4 @@
 package homework.day3.playground.essence.material;
 
-public class Petrol {
+public class Petrol implements Pourable, Powerable{
 }

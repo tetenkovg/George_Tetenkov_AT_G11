@@ -2,7 +2,7 @@ package homework.day3.playground.essence.creatures;
 
 import homework.day3.playground.essence.plants.Carrot;
 
-public class Beetle extends Insect {
+public class Beetle extends Insect implements Crawlable {
     public Beetle(int mass, String name) {
         super(mass, name);
     }
