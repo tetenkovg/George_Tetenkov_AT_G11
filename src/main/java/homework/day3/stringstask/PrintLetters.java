@@ -1,4 +1,4 @@
-package homework.day2.day3.hometask3;
+package homework.day3.stringstask;
 
 public class PrintLetters {
 
