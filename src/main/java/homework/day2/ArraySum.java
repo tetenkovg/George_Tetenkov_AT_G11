@@ -12,7 +12,7 @@ public class ArraySum {
     public static int sumOfEveryNthElement(int[] array, int n) {
         if (array == null || array.length == 0 || n <= 0) {
             System.out.println("Invalid input: check that the array is not empty and n is greater than 0.");
-            return 0; // Return 0 to indicate an invalid input
+            return 0;
         }
 
         int sum = 0;
