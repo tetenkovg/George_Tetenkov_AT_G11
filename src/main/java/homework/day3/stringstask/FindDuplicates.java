@@ -6,7 +6,7 @@ public class FindDuplicates {
         finder.findDuplicates("hello world hello java java java world");
     }
 
-    void findDuplicates (String text){
+    public static void findDuplicates (String text){
         String[] words = text.split("\\s+");
 
         for (int i = 0; i < words.length; i++) {
