@@ -24,7 +24,7 @@ public class FindDuplicates {
             }
 
                 if (count > 1){
-                    System.out.printf("Слово '%s' встречается %d раз(а)%n", words[i], count);
+                    System.out.printf("Word '%s' found %d time(s)%n", words[i], count);
                 }
             words[i] = null;
         }
