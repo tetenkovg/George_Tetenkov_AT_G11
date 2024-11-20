@@ -29,7 +29,7 @@ public class GenericMethodsInGenericClassTRunner {
         String text = "Hello";
         Integer number = 123;
         Double decimal = 45.67;
-        Matter matter = new Matter(100) {};
+        Matter matter = new Aircraft(100, "Generic Matter");
         Aircraft aircraft = new Aircraft(2000, "Generic Aircraft");
         Copter copter = new Copter(1500, "Helicopter");
         Plane plane = new Plane(3000, "Jet");
