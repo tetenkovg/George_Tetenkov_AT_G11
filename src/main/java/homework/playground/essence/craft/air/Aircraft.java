@@ -1,8 +1,9 @@
 package homework.playground.essence.craft.air;
 
+import homework.playground.essence.Flyable;
 import homework.playground.essence.Matter;
 
-public class Aircraft extends Matter {
+public class Aircraft extends Matter implements Flyable {
     protected String name;
 
     public Aircraft(int mass, String name) {
@@ -10,5 +11,8 @@ public class Aircraft extends Matter {
         this.name = name;
     }
 
-
+    @Override
+    public String getName() {
+        return null;
+    }
 }
