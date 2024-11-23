@@ -1,8 +1,9 @@
 package homework.playground.essence.craft.field;
 
 import homework.playground.essence.Matter;
+import homework.playground.essence.craft.Transportable;
 
-public class Vehicle extends Matter {
+public class Vehicle extends Matter implements Transportable {
     protected String name;
 
     public String getName() {
