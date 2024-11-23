@@ -8,4 +8,8 @@ public class Rocket extends Aircraft implements Flyable, Transportable {
         super(mass, name);
     }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
 }
