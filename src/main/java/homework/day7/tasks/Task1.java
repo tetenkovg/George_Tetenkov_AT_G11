@@ -16,7 +16,6 @@ public class Task1 {
 
         for (String butterfly : butterflies){
             System.out.println("\"" + butterfly + "\"");
-            System.out.println("\"" + butterfly + "\"");
         }
 
         int count = 0;
