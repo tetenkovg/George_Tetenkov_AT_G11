@@ -42,6 +42,5 @@ public class Task11 {
         for (int i = 0; i < bubbles.size(); i++) {
             System.out.println(bubbles.get(i).toString());
         }
-
     }
 }
