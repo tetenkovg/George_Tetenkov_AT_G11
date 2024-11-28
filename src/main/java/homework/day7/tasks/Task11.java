@@ -1,6 +1,6 @@
 package homework.day7.tasks;
 
-import project.Bubble;
+import homework.day7.utils.Bubble;
 
 import java.util.Arrays;
 import java.util.List;
