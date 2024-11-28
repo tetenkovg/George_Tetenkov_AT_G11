@@ -17,7 +17,7 @@ public class Chair {
         return height;
     }
 
-    public int getName() {
+    public int getWidth() {
         return width;
     }
 
