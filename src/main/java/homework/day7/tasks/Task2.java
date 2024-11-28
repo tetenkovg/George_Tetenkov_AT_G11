@@ -34,20 +34,20 @@ public class Task2 {
         }
 
 
-    int count = 0;
+        int count = 0;
 
-    for (String fig : figures){
-        if(!fig.toLowerCase().contains("-"));
-        count++;
-    }
-        System.out.println("Вот сколько фигур не содержат - :" + count);
+        for (String fig : figures){
+            if(!fig.contains("и")){
+                count++;
+            }
+        }
+        System.out.println("Вот сколько фигур не содержат и: " + count);
 
 
         for (int i = 0; i < figures.size(); i++) {
             System.out.print(figures.get(i));
             System.out.print(" ");
         }
-
 
         figures = new ArrayList<>(figures);
         figures.add(2, "Треугольник");
