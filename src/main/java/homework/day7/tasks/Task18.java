@@ -20,7 +20,6 @@ public class Task18 {
             System.out.println(car.getBrand() + ": " + car.getModel());
         }
 
-
         HashMap<String, Cars> map = new HashMap<>();
 
         for (int i = 0; i < cars.size(); i++) {
@@ -43,9 +42,6 @@ public class Task18 {
         for (Map.Entry<String, Cars> entry : map.entrySet()){
             System.out.println("Ключ Значение " + entry.getKey().toString() + " " +  entry.getValue().toString());
         }
-
-
-
 
     }
 }
