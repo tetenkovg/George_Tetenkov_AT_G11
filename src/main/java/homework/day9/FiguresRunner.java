@@ -15,6 +15,5 @@ public class FiguresRunner {
                 .map(f -> f.length())
                 .filter(f ->  f >  4)
                 .forEach(f -> System.out.println(f));
-
     }
 }
