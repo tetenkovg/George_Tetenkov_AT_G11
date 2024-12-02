@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class ButterfliesRunner {
-
-
     public static void main(String[] args) {
 
         List<String> butterflies;
