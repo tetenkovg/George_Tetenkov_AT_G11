@@ -18,7 +18,8 @@ public class CitiesRunner {
         cities.add("Москва");
         cities.add("Берлин");
 
-        long totalLength = cities.stream().mapToInt(c -> c.length()).sum();
+        long totalLength = cities.stream()
+                .mapToInt(c -> c.length()).sum();
 
         System.out.println(totalLength);
 
