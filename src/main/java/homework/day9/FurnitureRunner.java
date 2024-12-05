@@ -51,7 +51,7 @@ public class FurnitureRunner {
                     Bubble bubble = new Bubble(numberInWords, maxValue);
 
                     try {
-                        Files.writeString(Paths.get("zestOMG.txt"), bubble.toString()); // Записываем в файл
+                        Files.writeString(Paths.get("zestOMG.txt"), bubble.toString());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
