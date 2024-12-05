@@ -9,8 +9,8 @@ public class Bubble {
     private String name;
 
     public Bubble(String name,int volume) {
-        this.volume = volume;
         this.name = name;
+        this.volume = volume;
     }
 
     public int getVolume() {
