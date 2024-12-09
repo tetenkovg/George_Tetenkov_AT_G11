@@ -2,7 +2,7 @@ package homework.playground.essence.craft.hand;
 
 import homework.playground.essence.Matter;
 
-public class Container extends Matter {
+public class Container extends Matter{
 
     protected String name;
 
