@@ -46,9 +46,9 @@ public class EngineersTest {
     public void testEngineersConstructor() {
         if (type.equals("manual")) {
             ManualEngineer engineer = new ManualEngineer(age, experience);
-            Assert.assertEquals(age, engineer.getAge());
-            Assert.assertEquals(experience, engineer.getExperience());
-            Assert.assertEquals(experience * 2, engineer.getSkill());
+            Assert.assertEquals("wrong age", age, engineer.getAge());
+            Assert.assertEquals("Wrong exp",experience, engineer.getExperience());
+            Assert.assertEquals("wrong skill",experience * 2, engineer.getSkill());
             System.out.println("Вот наш инженер "
                     + "Age:" + age +
                     " Exp: " + experience +
@@ -77,16 +77,16 @@ public class EngineersTest {
             engineer.setAge(randomNumber);
             Assert.assertEquals(randomNumber, engineer.getAge());
             System.out.println("Вот наш инженер " +
-                    "Age:" + randomNumber + " Exp: " +
-                    experience + " Skill: " +
-                    engineer.getSkill() +
+                    " Age:" + randomNumber +
+                    " Exp: " + experience +
+                    " Skill: " + engineer.getSkill() +
                     " Type " + type);
         } else if (type.equals("auto")) {
             AutomatedEngineer engineer = new AutomatedEngineer(age, experience);
             engineer.setAge(randomNumber);
             Assert.assertEquals(randomNumber, engineer.getAge());
             System.out.println("Вот наш инженер " +
-                    "Age:" + engineer.getAge() +
+                    " Age:" + engineer.getAge() +
                     " Exp: " + engineer.getExperience() +
                     " Skill: " + engineer.getSkill() +
                     " Type " + type);

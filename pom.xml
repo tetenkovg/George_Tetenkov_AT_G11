@@ -13,6 +13,26 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <includes>
+                        <include>junit/EngineersTest.java</include>
+                    </includes>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
@@ -29,5 +49,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
 
 </project>
