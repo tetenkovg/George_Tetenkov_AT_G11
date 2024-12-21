@@ -1,0 +1,22 @@
+Mail.ru
+xpath
+//*[@id='ph-whiteline']/div/a logo
+//*[@href='//lady.mail.ru/'] lady
+//*[@data-click-counter="417831799, 61021856"] cloud in header
+//a[@data-click-counter='417831800, 61021854, 90824763'] - mail in cloud
+//div[@id='mailbox']/div[contains(@class, 'click')] - sign in
+//a[@data-click-counter='75068995'] - sign up
+//div[@id='mailbox']/div[contains(@class, 'footer')] - create mailing box
+//button[@data-testid='search-button'] - find
+
+css
+.ph-logo - logo
+a[href='//lady.mail.ru/'] - lady
+a[data-click-counter='417831799, 61021856'] - cloud in header
+a[data-click-counter='417831800, 61021854, 90824763'] - mail in header
+#mailbox .resplash-btn_primary - sing in
+#mailbox .footer - create mailbox
+a[data-click-counter='75068995'] - sing up
+button[data-testid='search-button'] - find
+
+
