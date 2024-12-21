@@ -13,6 +13,7 @@ public class SeleniumTestTwo {
         WebDriver driver1 = new ChromeDriver();
         driver1.get("https://google.com/");
 
+        driver1.findElement(By.xpath("//*[@id='L2AGLb']")).click();
         driver1.findElement(By.name("q")).sendKeys("погода минск");
         sleep(2000);
         WebElement firstElement = driver1.findElement(By.xpath("//*[@role='listbox']/*[@data-entityname='погода минск']"));
