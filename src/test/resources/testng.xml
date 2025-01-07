@@ -2,7 +2,9 @@
 <suite name="Engineer Suite">
     <test name="Engineers Tests">
         <classes>
-            <class name="testng.EngineersTest"/>
+            <class name="testng.ParametrizedTestNgTests"/>
+            <class name="testng.ManualEngineerTestngTests"/>
+            <class name="testng.AutoEngineerTestngTests"/>
         </classes>
     </test>
 </suite>
