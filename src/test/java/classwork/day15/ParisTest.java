@@ -112,7 +112,7 @@ public class ParisTest {
             sorterDropdown.click();
         }
 
-        WebElement sortOptionRatingDesc = driver.findElement(By.xpath("//span[text()='Property rating (low to high)']"));
+        WebElement sortOptionRatingDesc = driver.findElement(By.xpath("//span[text()='Property rating (high to low)']"));
         sortOptionRatingDesc.click();
 
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(
@@ -121,7 +121,7 @@ public class ParisTest {
 
         List<WebElement> stars = driver.findElements(By.xpath("//div[./h3]/div/span/div"));
         String rating = stars.getFirst().getAttribute("aria-label");
-        Assert.assertEquals(rating, "1 out of 5", "Wrong rating!");
+        Assert.assertEquals("Wrong Rating", "5 out of 5", rating);
 
 
     }
