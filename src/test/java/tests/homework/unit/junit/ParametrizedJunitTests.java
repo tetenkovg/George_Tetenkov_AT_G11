@@ -1,4 +1,4 @@
-package junit;
+package tests.homework.unit.junit;
 
 import org.junit.FixMethodOrder;
 import org.junit.Test;

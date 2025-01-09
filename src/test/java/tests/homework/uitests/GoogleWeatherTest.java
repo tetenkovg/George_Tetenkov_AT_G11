@@ -1,4 +1,4 @@
-package classwork.day14;
+package tests.homework.uitests;
 
 
 
@@ -10,18 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.DayOfWeek;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.TextStyle;
 import java.util.List;
-import java.util.Locale;
 
 import static java.lang.Thread.sleep;
 
-public class SeleniumTestTwo {
+public class GoogleWeatherTest {
     @Test
     public void getWeather() throws InterruptedException {
 

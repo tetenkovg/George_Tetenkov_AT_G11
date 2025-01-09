@@ -1,5 +1,6 @@
-package org.example;
+package tests.classwork.day14;
 
+import org.example.Person;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 public class PersonTest {

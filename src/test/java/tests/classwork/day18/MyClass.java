@@ -1,4 +1,4 @@
-package classwork.day18;
+package tests.classwork.day18;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
