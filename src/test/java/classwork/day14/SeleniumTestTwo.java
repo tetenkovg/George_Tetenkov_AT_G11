@@ -1,7 +1,8 @@
 package classwork.day14;
 
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,5 +61,4 @@ public class SeleniumTestTwo {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE");
         return tomorrowDay = now.plusDays(1).format(formatter);
     }
-
 }
