@@ -1,4 +1,4 @@
-package tests.homework.uitests;
+package tests.homework.uitests.junit;
 
 
 

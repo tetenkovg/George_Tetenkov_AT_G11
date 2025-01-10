@@ -22,10 +22,13 @@
                 <version>3.0.0</version>
                 <configuration>
                     <includes>
-                        <include>junit/EngineersTest.java</include>
+                        <!-- Запуск JUnit раннеров -->
+                        <include>runners.JunitEngineerRunner</include>
+                        <include>runners.JunitUiTestsRunner</include>
                     </includes>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <!-- Указываем путь к TestNG файлу -->
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
