@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,24 +15,26 @@ public class BookingHomePage {
         this.webDriver = driver;
     }
 
+    private static final String BOOKING_URL = "https://www.booking.com/";
+
     private static final By ACCEPT_COOKIES_BTN = By.cssSelector("button#onetrust-accept-btn-handler");
     private static final By SIGN_IN_DISMISS_BTN = By.xpath("//button[@aria-label='Dismiss sign in information.']");
     private static final By WHERE_TO_GO_INPUT = By.xpath("//input[@placeholder='Where are you going?']");
-    private static final By FIRST_SEARCH_RESULT = By.xpath("//div[text()='Paris']");
+    private static final String FIRST_SEARCH_RESULT = "//div[text()='%s']";
     private static final By GUESTS_BTN = By.cssSelector("[data-testid=occupancy-config]");
     private static final By ADULTS_PLUS_BTN = By.xpath("//div[@data-testid='occupancy-popup']/div/div[1]//button[@tabindex='-1'][2]");
     private static final By ROOMS_PLUS_BTN = By.xpath("//div[@data-testid='occupancy-popup']/div/div[3]//button[@tabindex='-1'][2]");
     private static final By DONE_BTN = By.xpath("//button/span[text()='Done']");
     private static final By SEARCH_BTN = By.xpath("//button/span[text()='Search']");
+    private static final By CURRENCY = By.xpath("//button[@data-testid='header-currency-picker-trigger']");
+    private static final By LANGUAGE = By.xpath("//button[@data-testid='header-language-picker-trigger']");
 
-    private static final By DATES_BOX = By.xpath("//*[@data-testid='searchbox-dates-container']");
+    private static final By CURRENCY_TOOLTIP = By.id(":r0:");
+    private static final By LANGUAGE_TOOLTIP = By.id(":r6:");
 
 
-    ////*[@data-date='2025-01-12']
-
-
-    public void open(String url) {
-        webDriver.get(url);
+    public void open() {
+        webDriver.get(BOOKING_URL);
     }
 
     public void acceptCookies() {
@@ -53,8 +56,9 @@ public class BookingHomePage {
         input.sendKeys(destination);
     }
 
-    public void selectFirstResult() {
-        webDriver.findElement(FIRST_SEARCH_RESULT).click();
+    public void selectFirstResult(String cityName) {
+        String xpath = String.format("//div[text()='%s']", cityName);
+        webDriver.findElement(By.xpath(xpath)).click();
     }
 
     public void setDates(LocalDate startDate, LocalDate endDate) {
@@ -80,5 +84,26 @@ public class BookingHomePage {
 
     public void clickSearch() {
         webDriver.findElement(SEARCH_BTN).click();
+    }
+
+    public void hoverOverCurrency() {
+        new Actions(webDriver)
+                .moveToElement(webDriver
+                        .findElement(CURRENCY))
+                .perform();
+    }
+
+    public void hoverOverLanguage() {
+        new Actions(webDriver)
+                .moveToElement(webDriver
+                        .findElement(LANGUAGE))
+                .perform();
+    }
+
+    public String currencyTooltipText(){
+        return webDriver.findElement(CURRENCY_TOOLTIP).getText().toLowerCase();
+    }
+    public String languageTooltipText(){
+        return webDriver.findElement(LANGUAGE_TOOLTIP).getText().toLowerCase();
     }
 }

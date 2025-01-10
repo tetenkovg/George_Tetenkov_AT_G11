@@ -2,11 +2,11 @@ package tests.homework.uitests.junit;
 
 
 import driver.DriverManager;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import pages.BookingHomePage;
 import pages.BookingSearchResultsPage;
 import utils.DateUtils;
@@ -18,21 +18,22 @@ public class ParisTest {
     private BookingHomePage bookingHomePage;
     private BookingSearchResultsPage bookingSearchResultsPage;
 
-    @BeforeTest
+    @Before
     public void setUp() {
         WebDriver driver = DriverManager.getDriver();
         bookingHomePage = new BookingHomePage(driver);
         bookingSearchResultsPage = new BookingSearchResultsPage(driver);
-        bookingHomePage.open("https://www.booking.com/");
+
     }
 
     @Test
     public void testParisSearch() {
+        bookingHomePage.open();
         bookingHomePage.acceptCookies();
         bookingHomePage.dismissSignInIfPresent();
 
         bookingHomePage.enterDestination("Paris");
-        bookingHomePage.selectFirstResult();
+        bookingHomePage.selectFirstResult("Paris");
 
         LocalDate startDate = DateUtils.generateStartDate(3);
         LocalDate endDate = DateUtils.generateEndDate(startDate, 7);
@@ -50,8 +51,8 @@ public class ParisTest {
     }
 
 
-    @AfterTest
-    public void tearDown() {
+    @After
+    public void teardown() {
         DriverManager.quitDriver();
     }
 }

@@ -1,12 +1,13 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.List;
 
@@ -23,6 +24,8 @@ public class BookingSearchResultsPage {
     private static final By SORT_OPTION_RATING_DESC = By.xpath("//span[text()='Property rating (high to low)']");
     private static final By SKELETON_LOADER = By.cssSelector("[data-testid=skeleton-loader]");
     private static final By HOTEL_STARS = By.xpath("//div[./h3]/div/span/div");
+    private static final By HOTEL_CARD = By.cssSelector("div[data-testid='property-card']");
+    private static final By HOTEL_TITLE = By.cssSelector("div[data-testid='title']");
 
 
     public void dismissSignInIfPresent() {
@@ -60,5 +63,39 @@ public class BookingSearchResultsPage {
     public String getFirstHotelRating() {
         List<WebElement> stars = webDriver.findElements(HOTEL_STARS);
         return stars.get(0).getAttribute("aria-label");
+    }
+
+    public void changeHotelStyle(int hotelIndex, String backgroundColor, String titleColor){
+        new WebDriverWait(webDriver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(HOTEL_CARD));
+
+        List<WebElement> hotels = webDriver.findElements(HOTEL_CARD);
+        if (hotelIndex < 1 || hotelIndex > hotels.size()){
+            throw new IllegalArgumentException("Hotel index " + hotelIndex + "is out of range. Total hotels: " + hotels.size());
+        }
+
+        WebElement hotel = hotels.get(hotelIndex -1);
+        WebElement hotelTitle = hotel.findElement(HOTEL_TITLE);
+
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", hotel);
+
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.backgroundColor = arguments[1];",
+                hotelTitle,
+                backgroundColor);
+
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.color = arguments[1];",
+                hotelTitle,
+                titleColor);
+
+    }
+
+    public void takeScreenshot(String fileName) {
+        byte[] screenshotBytes = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES);
+        Path path = Paths.get(fileName);
+        try {
+            Files.write(path, screenshotBytes);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

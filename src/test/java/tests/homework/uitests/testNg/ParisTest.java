@@ -23,7 +23,6 @@ public class ParisTest {
         WebDriver driver = DriverManager.getDriver();
         bookingHomePage = new BookingHomePage(driver);
         bookingSearchResultsPage = new BookingSearchResultsPage(driver);
-        bookingHomePage.open("https://www.booking.com/");
     }
 
     @Test
@@ -32,7 +31,7 @@ public class ParisTest {
         bookingHomePage.dismissSignInIfPresent();
 
         bookingHomePage.enterDestination("Paris");
-        bookingHomePage.selectFirstResult();
+        bookingHomePage.selectFirstResult("Paris");
 
         LocalDate startDate = DateUtils.generateStartDate(3);
         LocalDate endDate = DateUtils.generateEndDate(startDate, 7);
