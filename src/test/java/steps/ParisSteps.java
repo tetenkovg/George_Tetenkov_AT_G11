@@ -6,8 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.BookingHomePage;
-import pages.BookingSearchResultsPage;
+import pages.selenium.BookingHomePage;
+import pages.selenium.BookingSearchResultsPage;
 import utils.DateUtils;
 
 import java.time.LocalDate;

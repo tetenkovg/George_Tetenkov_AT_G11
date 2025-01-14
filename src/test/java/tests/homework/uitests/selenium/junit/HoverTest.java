@@ -1,4 +1,4 @@
-package tests.homework.uitests.junit;
+package tests.homework.uitests.selenium.junit;
 
 import driver.DriverManager;
 import org.junit.After;
@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import pages.BookingHomePage;
+import pages.selenium.BookingHomePage;
 
 public class HoverTest {
     private BookingHomePage bookingHomePage;

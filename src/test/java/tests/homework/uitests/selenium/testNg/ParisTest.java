@@ -1,4 +1,4 @@
-package tests.homework.uitests.testNg;
+package tests.homework.uitests.selenium.testNg;
 
 
 import driver.DriverManager;
@@ -9,8 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.BookingHomePage;
-import pages.BookingSearchResultsPage;
+import pages.selenium.BookingHomePage;
+import pages.selenium.BookingSearchResultsPage;
 import utils.DateUtils;
 
 import java.time.LocalDate;

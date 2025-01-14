@@ -1,4 +1,4 @@
-package tests.homework.uitests.testNg;
+package tests.homework.uitests.selenium.testNg;
 
 import driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.BookingHomePage;
+import pages.selenium.BookingHomePage;
 
 public class HoverTest {
     private static final Logger LOGGER = LogManager.getLogger(HoverTest.class);
