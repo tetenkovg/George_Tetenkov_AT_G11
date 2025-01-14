@@ -1,13 +1,13 @@
-package tests.homework.uitests.junit;
+package tests.homework.uitests.selenium.junit;
 
 
 import driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
 import org.junit.*;
-import pages.W3SchoolsJavaPage;
-import pages.GoogleSearchPage;
-import pages.GoogleSearchResultsPage;
+import pages.selenium.W3SchoolsJavaPage;
+import pages.selenium.GoogleSearchPage;
+import pages.selenium.GoogleSearchResultsPage;
 
 public class W3SchoolsTest {
 

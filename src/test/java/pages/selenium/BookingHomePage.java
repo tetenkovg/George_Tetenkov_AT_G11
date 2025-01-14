@@ -1,4 +1,4 @@
-package pages;
+package pages.selenium;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import tests.homework.uitests.testNg.ParisTest;
 
 import java.time.LocalDate;
 import java.util.List;

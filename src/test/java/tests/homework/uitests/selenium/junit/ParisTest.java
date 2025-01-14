@@ -1,4 +1,4 @@
-package tests.homework.uitests.junit;
+package tests.homework.uitests.selenium.junit;
 
 
 import driver.DriverManager;
@@ -7,8 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
-import pages.BookingHomePage;
-import pages.BookingSearchResultsPage;
+import pages.selenium.BookingHomePage;
+import pages.selenium.BookingSearchResultsPage;
 import utils.DateUtils;
 
 import java.time.LocalDate;

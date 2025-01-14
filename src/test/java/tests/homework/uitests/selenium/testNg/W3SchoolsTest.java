@@ -1,4 +1,4 @@
-package tests.homework.uitests.testNg;
+package tests.homework.uitests.selenium.testNg;
 
 import driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -8,9 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.W3SchoolsJavaPage;
-import pages.GoogleSearchPage;
-import pages.GoogleSearchResultsPage;
+import pages.selenium.W3SchoolsJavaPage;
+import pages.selenium.GoogleSearchPage;
+import pages.selenium.GoogleSearchResultsPage;
 
 public class W3SchoolsTest {
 

@@ -10,9 +10,9 @@
 
     <test name="UI Tests">
         <classes>
-            <class name="tests.homework.uitests.testNg.LondonTest"/>
-            <class name="tests.homework.uitests.testNg.HoverTest"/>
-            <class name="tests.homework.uitests.testNg.W3SchoolsTest"/>
+            <class name="tests.homework.uitests.selenium.testNg.LondonTest"/>
+            <class name="tests.homework.uitests.selenium.testNg.HoverTest"/>
+            <class name="tests.homework.uitests.selenium.testNg.W3SchoolsTest"/>
         </classes>
     </test>
 </suite>

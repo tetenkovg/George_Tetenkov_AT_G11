@@ -1,4 +1,4 @@
-package tests.homework.uitests.junit;
+package tests.homework.uitests.selenium.junit;
 
 
 
