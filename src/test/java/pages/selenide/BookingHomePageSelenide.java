@@ -45,7 +45,6 @@ public class BookingHomePageSelenide {
     }
 
 
-
     public void dismissGeniune() {
         DismissGeniune.dismissGeniune(SIGN_IN_DISMISS_BTN);
     }

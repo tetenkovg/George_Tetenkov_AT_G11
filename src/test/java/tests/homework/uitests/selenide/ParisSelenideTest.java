@@ -1,6 +1,7 @@
 package tests.homework.uitests.selenide;
 
 
+import com.codeborne.selenide.WebDriverRunner;
 import driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,6 +31,7 @@ public class ParisSelenideTest {
     public void testParisSearch() {
         LOGGER.debug("Opening Booking home page.");
         bookingHomePage.openURL();
+        // WebDriverRunner.getWebDriver().manage().window().maximize();
 
         LOGGER.debug("Accepting cookies.");
         bookingHomePage.acceptCookies();
