@@ -25,9 +25,6 @@ public class JsonTests {
     public void Test(){
         Search searchRequest = new Search("", false);
         SearchResponse response = steps.searchUser(searchRequest);
-
-
-
         System.out.println(response);
 
     }
