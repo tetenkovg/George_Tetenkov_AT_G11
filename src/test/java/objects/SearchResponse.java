@@ -9,8 +9,6 @@ public class SearchResponse {
     private List<UserData> data;
 
     public SearchResponse (){
-
-
     }
     public SearchResponse(String code, List<UserData> data) {
         this.code = code;
