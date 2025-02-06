@@ -8,12 +8,15 @@ public class Fraction {
     private Integer denumerator;
 
     public Fraction(Integer numerator, Integer denumerator) {
-        if (denumerator == null || numerator == null) {
-            throw new IllegalArgumentException("Numerator or Denumarator cannot be null");
-
+        try {
+            if (denumerator == null || numerator == null) {
+                throw new IllegalArgumentException("Numerator or Denumarator cannot be null");
+            }
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
         }
 
-        if (denumerator == 0){
+        if (denumerator == 0) {
             throw new IllegalArgumentException("Denumerator cannot be Zero");
         }
         this.numerator = numerator;
@@ -57,7 +60,7 @@ public class Fraction {
         this.denumerator = denumerator;
     }
 
-    public static Fraction addFraction(Fraction fractionOne, Fraction fractionTwo){
+    public static Fraction addFraction(Fraction fractionOne, Fraction fractionTwo) {
         Integer commonDenumerator = fractionOne.denumerator * fractionTwo.denumerator;
         Integer numerator = fractionOne.numerator * fractionTwo.denumerator + fractionTwo.numerator * fractionOne.denumerator;
         return new Fraction(numerator, commonDenumerator);
