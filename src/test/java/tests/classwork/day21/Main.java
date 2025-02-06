@@ -1,9 +1,13 @@
 package tests.classwork.day21;
 
+import org.openqa.selenium.InvalidArgumentException;
+
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.lang.Integer.MIN_VALUE;
 
 
 //Задача 1: FizzBuzz
@@ -18,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         String text = "Hello how are you herMorzoviiiiiii";
-        int[] arrayOfInts = {1, 101, 2552, 15, 755557, 1001001, 154451, 15, 5, 3, 25, 10};
+        int[] arrayOfInts = {10, 9};
 
 
         List<String> list = Arrays.asList("Hi", "Hi", "helloe", "hello", "Hell1", "Hell1");
@@ -34,6 +38,13 @@ public class Main {
         System.out.println(stringWithMaxLengt(text));
         System.out.println(stringWithMaxLength(text));
         System.out.println(removeDoublicatesFromTheList(list).toString());
+
+
+        try {
+            System.out.println(findSencMaxElement(arrayOfInts));
+        } catch (InvalidArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        };
 
     }
 
@@ -120,13 +131,13 @@ public class Main {
         return stringsList[indexOfMaxString];
     }
 
-    static String stringWithMaxLength (String text){
+    static String stringWithMaxLength(String text) {
         if (text.length() == 0 || text.isEmpty()) {
             return "Text is Empty";
 
         }
         return Arrays.stream(text.split(" "))
-                .max((a,b) -> Integer.compare(a.length(), b.length()))
+                .max((a, b) -> Integer.compare(a.length(), b.length()))
                 .orElse("No Words Found");
 
     }
@@ -136,7 +147,38 @@ public class Main {
 //    Условие: Дан список (ArrayList) из целых чисел. Удалить дубликаты, сохранив порядок.
 //    Цель: Проверка знаний о List, Set и умении комбинировать их для фильтрации.
 
-    static List<String> removeDoublicatesFromTheList(List<String> list){
+    static List<String> removeDoublicatesFromTheList(List<String> list) {
         return list.stream().distinct().toList();
+    }
+
+
+    //    Задача 8: Поиск второго по величине элемента в массиве
+//    Условие: Найти второй (или k-й) по величине элемент массива.
+//    Пример: [2, 8, 1, 10, 10, 7] – второй по величине = 8 (если считать, что 10 – первый).
+//    Цель: Работа с массивами, алгоритмическое мышление: как найти k-й максимум или минимум без полной сортировки, либо используя сортировку.
+    static int findSencMaxElement(int[] arrayOfInts) {
+        if (arrayOfInts.length <= 1) {
+            System.out.println("lenght is lower than 2");
+            throw new InvalidArgumentException("invalid array");
+        }
+
+
+        int max = MIN_VALUE;
+        int secondAfterMax = MIN_VALUE;
+
+        for (int a : arrayOfInts) {
+            if (max < a) {
+                secondAfterMax = max;
+                max = a;
+            } else if (a > secondAfterMax && a < max) secondAfterMax = a;
+        }
+
+        if (secondAfterMax == MIN_VALUE) {
+            {
+                throw new InvalidArgumentException("Second After Max was not found as all values in array equal each other");
+
+            }
+        }
+        return secondAfterMax;
     }
 }

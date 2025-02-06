@@ -15,7 +15,7 @@ public class FractionTests {
     public void FractionAddTest(){
 
         LOGGER.info("Create Fraction One");
-        Fraction fractionOne = new Fraction(5,null);
+        Fraction fractionOne = new Fraction(5,2);
         LOGGER.info("Create Fraction Two");
         Fraction fractionTwo = new Fraction(7, 6);
         LOGGER.info("Create Fraction One");
