@@ -19,9 +19,9 @@ public class HomeTask3 {
         StringBuilder sb = new StringBuilder(textMod);
 
 
-        for (int i = textMod.length() -1; i > 0; i--) {
+        for (int i = textMod.length() - 1; i > 0; i--) {
             if (textMod.charAt(i) == textMod.charAt(i - 1)) {
-                sb.deleteCharAt(i-1);
+                sb.deleteCharAt(i - 1);
 
             }
         }
