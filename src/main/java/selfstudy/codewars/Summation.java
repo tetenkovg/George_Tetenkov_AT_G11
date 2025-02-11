@@ -1,4 +1,4 @@
-package codewars;
+package selfstudy.codewars;
 
 public class Summation {
     public static void main(String[] args) {

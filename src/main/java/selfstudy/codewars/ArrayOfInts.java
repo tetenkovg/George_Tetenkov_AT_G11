@@ -1,4 +1,4 @@
-package codewars;
+package selfstudy.codewars;
 
 import java.util.ArrayList;
 import java.util.List;
