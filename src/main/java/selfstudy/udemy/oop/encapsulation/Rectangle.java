@@ -1,4 +1,4 @@
-package selfstudy.udemy.oop.incapsulation;
+package selfstudy.udemy.oop.encapsulation;
 
 public class Rectangle {
     private Point leftUpperCorner;

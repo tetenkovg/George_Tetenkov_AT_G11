@@ -1,4 +1,4 @@
-package selfstudy.udemy.oop.incapsulation;
+package selfstudy.udemy.oop.encapsulation;
 
 public class Runner {
     public static void main(String[] args) {
