@@ -24,10 +24,8 @@ public class Xywalker {
     }
 
     public static boolean isValid(char[] walk) {
-        int n = 0;
-        int s = 0;
-        int e = 0;
-        int w = 0;
+        int y = 0;
+        int x = 0;
 
         if (walk.length != 10) {
             System.out.println(walk.length);
@@ -36,16 +34,16 @@ public class Xywalker {
 
         for (char c : walk) {
             if(c == 'n'){
-                n++;
+                y++;
             } else if (c == 's'){
-                s++;
+                y--;
             } else if (c == 'e'){
-                e++;
+                x++;
             } else {
-                w++;
+                x--;
             }
         }
-        if (n - s == 0 && w - e == 0){
+        if (x == 0 && y == 0){
             return true;
 
         }
