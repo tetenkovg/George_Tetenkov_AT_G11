@@ -12,6 +12,10 @@ public class StringTask5 {
             System.out.println(stringDelimiter(text , 10)[i]);
         }
 
+        String text2 = text.substring(0, 10);
+
+        System.out.println(text2);
+
 
     }
 
