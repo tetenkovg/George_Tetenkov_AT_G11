@@ -1,4 +1,4 @@
-package selfstudy.udemy.oop.encapsulation.oop_practice;
+package selfstudy.udemy.oop.oop_practice.classwork;
 
 public class Enemy implements Mortal {
     private int health;

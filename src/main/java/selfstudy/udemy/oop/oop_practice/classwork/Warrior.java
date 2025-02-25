@@ -1,8 +1,8 @@
-package selfstudy.udemy.oop.encapsulation.oop_practice;
+package selfstudy.udemy.oop.oop_practice.classwork;
 
-public class Mage extends Hero {
+public class Warrior extends Hero{
 
-    public Mage(String name, int damage) {
+    public Warrior(String name,int damage) {
         super(name, damage);
     }
 

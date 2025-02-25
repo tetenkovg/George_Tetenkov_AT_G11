@@ -1,6 +1,4 @@
-package selfstudy.udemy.oop.encapsulation.oop_practice;
-
-import java.util.Arrays;
+package selfstudy.udemy.oop.oop_practice.classwork;
 
 public class TrainingGround {
     public static void main(String[] args) {
