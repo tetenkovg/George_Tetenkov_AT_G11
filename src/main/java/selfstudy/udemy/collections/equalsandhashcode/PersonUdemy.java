@@ -40,4 +40,13 @@ public class PersonUdemy {
     public int hashCode() {
         return Objects.hash(id, firstName, lastName);
     }
+
+    @Override
+    public String toString() {
+        return "PersonUdemy{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }
