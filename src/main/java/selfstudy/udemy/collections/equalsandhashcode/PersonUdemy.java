@@ -2,7 +2,7 @@ package selfstudy.udemy.collections.equalsandhashcode;
 
 import java.util.Objects;
 
-public class PersonUdemy {
+public class PersonUdemy{
     private int id;
     private String firstName;
     private String lastName;
