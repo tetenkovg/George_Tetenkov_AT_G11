@@ -6,7 +6,7 @@ import selfstudy.udemy.collections.task.task2.sorters.IdComparator;
 
 import java.util.*;
 
-import static selfstudy.udemy.collections.task.task2.BestStundet.findMaxId;
+import static selfstudy.udemy.collections.task.task2.BestStudent.findMaxId;
 
 public class StudentRunner {
     public static void main(String[] args) {

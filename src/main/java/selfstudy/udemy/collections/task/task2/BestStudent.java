@@ -1,10 +1,8 @@
 package selfstudy.udemy.collections.task.task2;
 
-import selfstudy.udemy.collections.task.task2.Student;
-
 import java.util.List;
 
-public class BestStundet {
+public class BestStudent {
 
     public static Student findMaxId(List<Student> list) {
 
